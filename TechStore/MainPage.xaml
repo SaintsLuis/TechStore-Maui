@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:TechStore.Models;assembly=TechStore"
+             x:Class="TechStore.MainPage">
+    <ScrollView>
+        <StackLayout Margin="10"
+                     Spacing="10">
+            <!-- ? CarouselView for product advertisements -->
+            <CarouselView x:Name="adCarousel"
+                          ItemsSource="{Binding Advertisements}"
+                          HeightRequest="240"
+                          Margin="0,0,0,10"
+                          Loop="true">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="0"
+                               CornerRadius="0"
+                               HasShadow="True">
+                            <Image Source="{Binding ImageUrl}"
+                                   Aspect="AspectFit"
+                                   HeightRequest="240" />
+                        </Frame>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+            <!-- ? Category header -->
+            <Grid Margin="5,2"
+                  Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Shop by category"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="Large" />
+                <Label Text="View All"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"
+                       HorizontalTextAlignment="End"
+                       TextColor="Blue"
+                       Margin="0,0,10,0" />
+            </Grid>
+            <!-- ?  Carousel for categories -->
+            <CollectionView x:Name="lvCategories"
+                            ItemsSource="{Binding Categories}"
+                            ItemsLayout="HorizontalList"
+                            Margin="0,0,0,10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Category">
+                        <Frame Padding="10"
+                               Margin="5"
+                               CornerRadius="10"
+                               HasShadow="True">
+                            <Grid ColumnSpacing="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding ImageUrl}"
+                                       Aspect="AspectFit"
+                                       HeightRequest="32"
+                                       WidthRequest="32" />
+                                <Label Grid.Column="1"
+                                       Text="{Binding Name}"
+                                       FontAttributes="Bold"
+                                       FontSize="14"
+                                       VerticalOptions="Center" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <!-- ? Section Explore own products -->
+            <Grid Margin="5,2"
+                  Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Explore own products"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="Large" />
+                <Label Text="View All"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"
+                       HorizontalTextAlignment="End"
+                       TextColor="Blue"
+                       Margin="0,0,10,0" />
+            </Grid>
+            <!-- ? Bento Grid Style -->
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Frame Grid.RowSpan="2"
+                       Grid.Column="0"
+                       Padding="0"
+                       Margin="5"
+                       CornerRadius="10">
+                    <Image Source="item3.jpg"
+                           Aspect="AspectFill" />
+                </Frame>
+                <Frame Grid.Row="0"
+                       Grid.Column="1"
+                       Padding="0"
+                       Margin="5"
+                       CornerRadius="10">
+                    <Image Source="item1.jpg"
+                           Aspect="AspectFill" />
+                </Frame>
+                <Frame Grid.Row="1"
+                       Grid.Column="1"
+                       Padding="0"
+                       Margin="5"
+                       CornerRadius="10">
+                    <Image Source="item2.jpg"
+                           Aspect="AspectFill" />
+                </Frame>
+            </Grid>
+            <!-- ? Featured products header -->
+            <Grid Margin="5,2"
+                  Padding="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Label Text="Featured Products"
+                       Grid.Column="0"
+                       VerticalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="Large" />
+                <Label Text="View All"
+                       Grid.Column="1"
+                       VerticalOptions="Center"
+                       HorizontalOptions="End"
+                       HorizontalTextAlignment="End"
+                       TextColor="Blue"
+                       Margin="0,0,10,0" />
+            </Grid>
+            <!-- ? CollectionView for  Products -->
+            <CollectionView x:Name="lvProducts"
+                            ItemsSource="{Binding Products}"
+                            ItemsLayout="VerticalGrid, 2"
+                            Margin="0,0,0,10">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Product">
+                        <Frame Padding="0"
+                               Margin="10"
+                               BorderColor="LightGray"
+                               CornerRadius="10"
+                               HasShadow="True">
+                            <Grid RowSpacing="10"
+                                  ColumnSpacing="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Frame Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Padding="0"
+                                       Margin="0"
+                                       CornerRadius="10"
+                                       HasShadow="True">
+                                    <Image Source="{Binding ImageUrl}"
+                                           Aspect="AspectFill"
+                                           HeightRequest="150" />
+                                </Frame>
+                                <Label Grid.Row="1"
+                                       Text="{Binding Name}"
+                                       FontAttributes="Bold"
+                                       FontSize="16"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalOptions="Center"
+                                       Margin="5,5,0,0"
+                                       LineBreakMode="TailTruncation" />
+                                <Label Grid.Row="2"
+                                       Text="{Binding Price, StringFormat='Price: ${0:F2}'}"
+                                       FontAttributes="Bold"
+                                       FontSize="14"
+                                       HorizontalTextAlignment="Start"
+                                       VerticalOptions="Center"
+                                       Margin="5,5,0,0" />
+                                <Button Grid.Row="3"
+                                        Grid.Column="0"
+                                        Grid.ColumnSpan="2"
+                                        Text="Add to Cart"
+                                        BackgroundColor="Blue"
+                                        TextColor="White"
+                                        CornerRadius="10"
+                                        Padding="10,5"
+                                        HorizontalOptions="FillAndExpand" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

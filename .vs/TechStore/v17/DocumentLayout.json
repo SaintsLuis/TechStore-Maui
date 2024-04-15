@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PC\\Dev\\.NET-MAUI-projects\\TechStore\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C5C53D1-DE17-4E94-833C-8CF72EE8C771}|TechStore\\TechStore.csproj|c:\\users\\pc\\dev\\.net-maui-projects\\techstore\\techstore\\dataaccess\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C5C53D1-DE17-4E94-833C-8CF72EE8C771}|TechStore\\TechStore.csproj|solutionrelative:techstore\\dataaccess\\databaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C5C53D1-DE17-4E94-833C-8CF72EE8C771}|TechStore\\TechStore.csproj|c:\\users\\pc\\dev\\.net-maui-projects\\techstore\\techstore\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6C5C53D1-DE17-4E94-833C-8CF72EE8C771}|TechStore\\TechStore.csproj|solutionrelative:techstore\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatabaseInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\Dev\\.NET-MAUI-projects\\TechStore\\TechStore\\DataAccess\\DatabaseInitializer.cs",
+              "RelativeDocumentMoniker": "TechStore\\DataAccess\\DatabaseInitializer.cs",
+              "ToolTip": "C:\\Users\\PC\\Dev\\.NET-MAUI-projects\\TechStore\\TechStore\\DataAccess\\DatabaseInitializer.cs",
+              "RelativeToolTip": "TechStore\\DataAccess\\DatabaseInitializer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T13:09:51.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\PC\\Dev\\.NET-MAUI-projects\\TechStore\\TechStore\\MainPage.xaml",
+              "RelativeDocumentMoniker": "TechStore\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\PC\\Dev\\.NET-MAUI-projects\\TechStore\\TechStore\\MainPage.xaml",
+              "RelativeToolTip": "TechStore\\MainPage.xaml",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAAHkAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-15T12:58:42.549Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
